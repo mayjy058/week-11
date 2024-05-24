@@ -1,0 +1,123 @@
+:root {
+    --base-font-color: rgb(131, 148, 150);
+    --secondary-font-color: rgb(88, 110, 117);
+    --emphasised-font: rgb(147, 161, 161);
+
+    --c-background-color: rgb(0, 43, 54);
+    --c-background-highlights: rgb(7, 54, 66);
+
+    --c-yellow: rgb(181, 137, 0);
+    --c-orange: rgb(203, 75, 22);
+    --c-red: rgb(220, 50, 47);
+    --c-magenta: rgb(211, 54, 130);
+    --c-violet: rgb(108, 113, 196);
+    --c-blue: rgb(38, 139, 210);
+    --c-cyan: rgb(42, 161, 152);
+    --c-green: rgb(133, 153, 0);
+}
+
+body {
+    background-color: var(--c-background-color);
+    color: var(--base-font-color);
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+header, footer {
+    background-color: var(--c-background-highlights);
+    color: var(--base-font-color);
+    text-align: center;
+    padding: 1em;
+}
+
+header h1 {
+    color: var(--c-yellow);
+    font-size: 2em; /* Adjusted font size */
+}
+
+nav ul {
+    list-style: none; /* Remove bullets */
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    color: var(--base-font-color);
+    text-decoration: none;
+}
+
+article a {
+    color: var(--c-magenta);
+}
+
+article a:hover {
+    color: var(--c-orange);
+}
+
+article h3, article h3 + p {
+    border: 3px solid var(--c-cyan);
+    padding: 1em; /* Adjusted padding for spacing */
+    margin: 1em 0; /* Added margin for spacing */
+}
+
+aside {
+    color: var(--c-green);
+}
+
+aside a {
+    color: var(--c-red);
+}
+
+aside a:hover {
+    color: var(--c-blue);
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    header, footer {
+        text-align: center;
+        padding: 0.5em;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 0.5em 0;
+    }
+    main {
+        padding: 0.5em;
+    }
+    article, aside {
+        padding: 0.5em;
+    }
+    article h3, article h3 + p {
+        padding: 0.25em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+    nav ul {
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 0.25em 0;
+    }
+    main {
+        padding: 0.25em;
+    }
+    article h3, article h3 + p {
+        padding: 0.1em;
+    }
+}
